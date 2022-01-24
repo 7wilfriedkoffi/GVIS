@@ -1,0 +1,137 @@
+﻿
+@{
+    ViewBag.Title = "EnregistrerdansLN";
+}
+
+<h2>EnregistrerdansLN</h2>
+
+<div class="card ">
+    <div style="background-color:#008080; color:#ffffff" class="card-header">
+      Liste noire
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <form name="formLN" id="formLN" method="post" action="">
+                <div class="row m-3">
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-6 col-md-6 col-xl-6">
+                        <div class="form-outline">
+                            <label for="NOM_VISITEUR">* Nom </label>
+                            <input style="max-width:100%" type="text" class="form-control" id="NOM_VISITEUR" name="NOM_VISITEUR" placeholder="Nom" required>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-6 col-md-6 col-xl-6">
+                        <label for="PRENOMS_VISITEUR">* Prenoms</label>
+                        <input style="max-width:100%" type="text" class="form-control" id="PRENOMS_VISITEUR" name="PRENOMS" placeholder="Prenoms" required>
+                    </div>
+                </div>
+               
+                <div class="row m-3">
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-6 col-md-6 col-xl-6">
+                        <div class="form-outline">
+                            <label for="CONTACT_VISITEUR">Contact</label>
+                            <input style="max-width:100%" type="text" class="form-control" id="CONTACT_VISITEUR" name="CONTACT_VISITEUR" placeholder="Contact" required>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-6 col-md-6 col-xl-6">
+                        <label for="MOTIF_LN">Motif</label>
+                        <input style="max-width:100%" type="text" class="form-control" id="MOTIF_LN" name="MOTIF_LN" placeholder="Motif" required>
+                    </div>
+                </div>
+
+                <div class="row m-3">
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-6 col-md-6 col-xl-6">
+                        <div class="form-outline">
+                            <label for="TYPE_PIECE">Type de pièce</label>
+                            <select style="max-width:100%" class="form-select" name="TYPE_PIECE" id=" TYPE_PIECE ">
+                                <option value="CNI">CNI</option>
+                                <option value="Passport">Passport</option>
+                                <option value="F">Permis de conduire</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-6 col-md-6 col-xl-6">
+                        <label for="NUM_PIECE">N°pièce</label>
+                        <input style="max-width:100%" type="text" class="form-control" id="NUM_PIECE" name="NUM_PIECE" placeholder="Nom" required>
+                    </div>
+                </div>
+
+                <div class="form-group text-right">
+                    <button type="button" class="btn btn-labeled btn-danger">
+                        <span class="btn-label"><i class="fa fa-remove"></i></span>Annuler
+                    </button>
+
+
+                    <button type="button" class="btn btn-primary">
+                        <span class="btn-label"><i class="fa fa-save"></i></span>Enregistrer
+                    </button>
+                </div>
+            </form>
+            <!--FIN FORMULAIRE-->
+
+        </div>
+    </div>
+
+</div>
+
+<!--Affiche les données-->
+<div class="card m-5">
+    <div style="background-color:#008080; color:#ffffff" class="card-header">
+        <div class="row">
+            <div class="form-group col-lg-4 col-sm-4 col-xs-11 col-md-9 col-xl-8">
+                <i class="fa fa-user"></i>Liste des visites
+            </div>
+            <div class="form-group col-lg-8 col-sm-8 col-xs-1 col-md-3 col-xl-4">
+                <div class="input-group">
+                    <div class="form-outline">
+                        <input type="search" id="form1" class="form-control" placeholder="recherche" />
+                    </div>
+                    <button type="button" class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <tr>
+
+                    <th>Date</th>
+                    <th>Visiteur</th>
+                    <th>Motif</th>
+                    <th>Contact</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+
+                    <th>...</th>
+                    <th>...</th>
+                    <th>...</th>
+                    <th>...</th>
+                    <th style="width:auto">
+                        <a class="btn btn-labeled btn-warning btn-sm modifier" href=" ">
+                            <span class="btn-label"> <i class="fa fa-edit"></i> </span>modifier
+                        </a>
+
+                        <a class="btn btn-labeled btn-info btn-sm detail" href=" ">
+                            <span class="btn-label"> <i class="fa fa-info"></i> </span>Detail
+                        </a>
+
+                        <a class="btn btn-labeled btn-danger btn-sm supprimer" href=" ">
+                            <span class="btn-label"> <i class="fa fa-trash"></i> </span>Supprime
+                        </a>
+
+
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

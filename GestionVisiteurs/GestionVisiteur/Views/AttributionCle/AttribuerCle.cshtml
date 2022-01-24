@@ -1,0 +1,146 @@
+﻿
+@{
+    ViewBag.Title = "AttribuerCle";
+}
+
+<h2>AttribuerCle</h2>
+
+<div class="card ">
+    <div class="card-header" style="background-color:#008080; color:#ffffff" >
+        Planifier visites
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <form name="formRDV" id="formRDV" method="post" action="">
+                <div class="row ">
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-6 col-md-6 col-xl-6">
+                        <div class="form-outline">
+                            <label for="TYPE_PIECE">Sélectionner Batiment</label>
+                            <select style="max-width:100%" multiple class="form-select" name="TYPE_PIECE" id=" TYPE_PIECE ">
+                                <option value="DLSI">DLSI</option>
+                                <option value="CQM">CQM</option>
+                                <option value="PBAT">PBAT</option>
+                                <option value="PTE">PTE</option>
+                                <option value="DRH">DRH</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    
+                   
+                        <div class="form-group col-lg-12 col-sm-12 col-xs-3 col-md-3 col-xl-3">
+                            <div class="form-outline">
+                                <label for="date1">Date</label>
+                                <input style="max-width:100%" id="date1" class="form-control" type="date">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group col-lg-12 col-sm-12 col-xs-3 col-md-3 col-xl-3">
+                            <label for="myTime1">Heure</label>
+                            <input style="max-width:100%" id="myTime1" class="form-control" type="time">
+                        </div>                
+                 
+
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-7 col-md-7 col-xl-7">
+                        <label></label>
+                        
+                    </div>   
+                    <div class="form-group col-lg-6 col-sm-6 col-xs-4 col-md-4 col-xl-4">
+                        <label for="AGENT_VISITE">Agent visité</label>
+                        <select style="max-width:100%" class="form-select" name="AGENT_VISITE" id="AGENT_VISITE">
+                            <option value=""></option>
+
+                        </select>
+
+                        <div class="form-group col-lg-12 col-sm-12 col-xs-3 col-md-3 col-xl-3">
+                            <div class="form-outline">
+                                <label></label>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group text-right">
+                    <button type="button" class="btn btn-labeled btn-danger">
+                        <span class="btn-label"><i class="fa fa-remove"></i></span>Annuler
+                    </button>
+
+
+                    <button type="button" class="btn btn-primary">
+                        <span class="btn-label"><i class="fa fa-save"></i></span>Attribuer
+                    </button>
+                </div>
+</form>
+            <!--FIN FORMULAIRE-->
+
+        </div>
+    </div>
+
+</div>
+
+<!--Affiche les données-->
+<div class="card m-5">
+    <div style="background-color:#008080; color:#ffffff" class="card-header">
+        <div class="row">
+            <div class="form-group col-lg-4 col-sm-4 col-xs-11 col-md-9 col-xl-8">
+                <i class="fa fa-user"></i>Liste des visites
+            </div>
+            <div class="form-group col-lg-8 col-sm-8 col-xs-1 col-md-3 col-xl-4">
+                <div class="input-group">
+                    <div class="form-outline">
+                        <input type="search" id="form1" class="form-control" placeholder="recherche" />
+                    </div>
+                    <button type="button" class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <tr>
+
+                    <th>Date</th>
+                    <th>Batiment</th>
+                    <th>Motif</th>
+                    <th>Heure</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+
+                    <th>...</th>
+                    <th>...</th>
+                    <th>...</th>
+                    <th>...</th>
+                    <th style="width:auto">
+                        <a class="btn btn-labeled btn-warning btn-sm modifier" href=" ">
+                            <span class="btn-label"> <i class="fa fa-edit"></i> </span>modifier
+                        </a>
+
+                        <a class="btn btn-labeled btn-info btn-sm detail" href=" ">
+                            <span class="btn-label"> <i class="fa fa-info"></i> </span>Detail
+                        </a>
+
+                        <a class="btn btn-labeled btn-danger btn-sm supprimer" href=" ">
+                            <span class="btn-label"> <i class="fa fa-trash"></i> </span>Supprime
+                        </a>
+
+
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">Menu 1</a></li>
+    <li><a href="#">Menu 2</a></li>
+    <li><a href="#">Menu 3</a></li>
+</ul>
